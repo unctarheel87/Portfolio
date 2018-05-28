@@ -4,27 +4,32 @@
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Varela|Inconsolata" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <a id="top-page" style="visibility: hidden;"></a>
   <header>
-  <!--
+    <i class="fas fa-bars fa-3x" onclick="openNav()"></i>
     <nav>
-      <ul class="container">
-        <li><a href="index.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div id="mySidenav" class="sidenav" >
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+          <a href="#about" onclick="closeNav()">About</a>
+          <a href="#work" onclick="closeNav()">Portfolio</a>
+          <a href="#contact" onclick="closeNav()">Contact</a>
+          <a href="contact.html"><i class="fas fa-download"></i> Resume</a>
+        </div>
+      </div>
     </nav>
-  -->  
   </header>
   <main id="site">
     <div class="jumbotron">
       <p>hello.</p>
       <p>I am a full-STACK developer.</p>
-      <p>view my work <a href="">here.</a></p>
+      <p>view my work <a href="#work">here.</a></p>
     </div>
-    <section class="about-me">
+    <a id="about"></a>
+    <section class="about-me"> 
       <h1>me<span class="period">.</span></h1>
       <hr style="width: 20%; margin-left: 0">
       <div class="text-content">
@@ -35,6 +40,7 @@
     <section class="contact">
       
     </section>
+    <a id="work"></a>
     <section class="portfolio">
       <h1>work<span class="period">.</span></h1>
       <hr style="width: 20%; margin-left: 0">
@@ -44,19 +50,20 @@
           <img src="assets/images/retire.jpg" />
         </div>
         <div class="portfolio-items">
-          <a href="https://limitless-headland-68511.herokuapp.com/" target="_blank">Market Graph</a>
+          <a href="https://bl.ocks.org/unctarheel87/2cc60a1a6ecdbb6c0b77375bf1c06399" target="_blank">Market Graph</a>
           <img src="assets/images/market.jpg" />
         </div>
         <div class="portfolio-items">
-          <a href="https://limitless-headland-68511.herokuapp.com/" target="_blank">Election Map</a>
+          <a href="http://bl.ocks.org/unctarheel87/11d967044ef344dae42dabe2c54c90a5" target="_blank">Election Map</a>
           <img src="assets/images/map.png" />
         </div>
         <div class="portfolio-items">
-          <a href="https://limitless-headland-68511.herokuapp.com/" target="_blank">Kristen Tillman<br>Designs</a>
+          <a href="http://www.kristentillman.com/" id="kristen-site" target="_blank">Kristen Tillman<br>Designs</a>
           <img src="assets/images/kristen.png" />
         </div>
       </div>  
     </section>
+    <a id="contact" style="visibility: hidden;"></a>
     <section class="contact-form">
       <div class="form-header">
         <h2>Lets talk. Inquire about work, CODE or just life.</h2>
@@ -70,11 +77,19 @@
   </main>  
   <footer>
     <div class="container">
-        <p>&copy; John Tillman</p>
+      <p>&copy; John Tillman</p>
+      <div class="social-links">
         <a href="http://www.linkedin.com/in/john-tillman-86622354" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
         <a href="mailto:john.w.tillman@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
-     
+      </div>
+      <a href="#top-page"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
-  </footer>  
+  </footer>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>  
+  <script src="assets/js/sideBar.js"></script>
+  <script src="assets/js/smoothScroll.js"></script>
 </body>
 </html>

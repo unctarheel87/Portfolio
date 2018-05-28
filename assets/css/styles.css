@@ -30,47 +30,68 @@ a {
 }
 
 /* Header Styles */
+
 header {
-  width: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  right: 30px;
+  top: 15px;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
+header i {
+  cursor: pointer;
 }
 
-nav {
+
+/* Sidenav */ 
+  
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #181818; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+.sidenav .container {
+  position: relative;
+  top: 60px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  margin: 0 auto;
 }
 
-nav a {
-  padding: 10px;
+.sidenav a {
+  padding: 20px;
+  font-size: 18px;
 }
 
-nav a:hover {
-  background-color: rgb(240, 240, 240);
-  opacity: 0.7;
-  transition: 1s;
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-nav h2 {
-  display: inline-block;
-  margin: 0;
+#site {
+  transition: margin-left .5s;
 }
 
-nav ul li {
-  padding: 0 20px;
+nav .container a {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-/* nav ul li:not(:last-child) {
-  border-right: 1px solid #dddddd;
-} */
+nav .container i {
+  margin-right: 10px;
+}
 
 /* Jumbotron */
 
@@ -122,6 +143,11 @@ nav ul li {
 }
 
 /* About Me content body styles */
+#about {
+  display: block; 
+  position: relative; 
+  visibility: hidden;
+}
 
 .about-me {
   max-width: 960px;
@@ -237,6 +263,13 @@ nav ul li {
 
 
 /* Portfolio content body styles */
+#work {
+  display: block; 
+  position: relative; 
+  top: -220px;
+  visibility: hidden;
+}
+
 .portfolio h1 {
   margin-top: 50px;
 }
@@ -283,23 +316,17 @@ nav ul li {
   position: absolute;
   opacity: 0;
   font-size: 20px;
-  transform: translate(46px, 80px);
+  color: rgba(255, 255, 255, 0.8);
+  transform: translate(50px, 76px);
 }
 
+#kristen-site {
+  transform: translate(42px, 76px);
+}
+  
 .portfolio .portfolio-items:hover a {
   opacity: 1;
-}
-
-.portfolio .portfolio-items p {
-  position: relative;
-}
-
-.portfolio .portfolio-img a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 20px;
-  opacity: 0
+  z-index: 2;
 }
 
 /* Footer Styles */
@@ -313,7 +340,20 @@ footer .container {
   box-shadow: 0px -6px 5px rgba(10, 10, 10, 0.3);
 }
 
-footer i {
+footer .social-links i {
   margin: 0 10px;
 }
 
+.fa-arrow-circle-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.35s;
+}
+
+.fa-arrow-circle-up:hover {
+  color: #ff1a41;
+  opacity: 0.8;
+  transition: 0.35s;
+}
