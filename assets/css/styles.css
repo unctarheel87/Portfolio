@@ -231,7 +231,7 @@ nav .container i {
 
 .contact-form form input, textarea {
   background: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 3px;
   margin: 5px;
   border: 2px solid rgba(0, 0, 0, 0.5);
@@ -257,10 +257,37 @@ nav .container i {
 }
 
 
-.contact-form form input:focus, textarea:focus {
+.contact-form form input:focus, textarea:focus, button:focus {
   outline: none;
 }
 
+.contact-form form button {
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 4.5px;
+  padding: 5px 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+.contact-form form button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+div.success {
+  color: lightgreen;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+div.error {
+  color: tomato;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+}
 
 /* Portfolio content body styles */
 #work {
@@ -303,7 +330,7 @@ nav .container i {
 .portfolio .portfolio-items img {
   height: 180px;
   width: 230px;
-  filter: grayscale(40%);
+  filter: grayscale(20%);
 }
 
 .portfolio .portfolio-items:hover img {

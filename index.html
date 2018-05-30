@@ -33,7 +33,7 @@
       <h1>me<span class="period">.</span></h1>
       <hr style="width: 20%; margin-left: 0">
       <div class="text-content">
-        <p>Hello there! I am full-stack Web Developer out of Carborro, NC. I enjoy music, reading and hanging out with my family.</p>
+        <p>My name is John Tillman, and I am full-stack Web Developer out of Carrboro, NC. I enjoy music, reading and hanging out with my family.</p>
         <p>I am a financial consultant by day and coding apprentice by night. I also play guitar and drink lots of coffee, otherwise, I couldn't keep up with my two kids, Liam and Lilly. I am currently working on data visualization - basically, I make data look cool.</p>
       </div>
     </section>
@@ -66,12 +66,14 @@
     <a id="contact" style="visibility: hidden;"></a>
     <section class="contact-form">
       <div class="form-header">
-        <h2>Lets talk. Inquire about work, CODE or just life.</h2>
+        <h2>Let's talk. Inquire about work, CODE or just life.</h2>
       </div>
-      <form>
-        <input type="text" placeholder="name">
-        <input type="text" placeholder="email">
-        <textarea type="text" placeholder="message"></textarea>
+      <div id="form-messages"></div>
+      <form id="ajax-form" action="mail.php" method="post">
+        <input type="text" id="name" name="name" placeholder="name" required>
+        <input type="text" id="email" name="email" placeholder="email" required>
+        <textarea type="text" id="message" name="message" placeholder="message" required></textarea>
+        <button type="submit">Submit</button>
       </form>
     </section>
   </main>  
@@ -80,7 +82,9 @@
       <p>&copy; John Tillman</p>
       <div class="social-links">
         <a href="http://www.linkedin.com/in/john-tillman-86622354" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="http://github.com/unctarheel87" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         <a href="mailto:john.w.tillman@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+        <a href="tel:1-919-740-4631"><i class="fas fa-mobile-alt fa-2x"></i></a>
       </div>
       <a href="#top-page"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
@@ -91,5 +95,6 @@
   crossorigin="anonymous"></script>  
   <script src="assets/js/sideBar.js"></script>
   <script src="assets/js/smoothScroll.js"></script>
+  <script src="assets/js/form.js"></script>
 </body>
 </html>
